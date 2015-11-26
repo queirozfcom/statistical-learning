@@ -1,0 +1,62 @@
+// using model_2 from item 5.2
+
+// setting the initial probabilities for each state
+MTK:8> model_2.pi[0] = 0.5;model_2.pi[1]=0.5
+
+// loading the first hidden states combinations
+MTK:9> obs0 = new intvalue("q5-4-obs/obs0.txt")
+MTK:10> obs1 = new intvalue("q5-4-obs/obs1.txt")
+
+// recreating the symbol observations object
+MTK:11> obs_symbols = new intvalue("q5obs.txt")
+
+// loading the rest of the combinations of hidden states
+MTK:12> obs2 = new intvalue("q5-4-obs/obs2.txt")
+MTK:13> obs3 = new intvalue("q5-4-obs/obs3.txt")
+MTK:14> obs4 = new intvalue("q5-4-obs/obs4.txt")
+MTK:15> obs5 = new intvalue("q5-4-obs/obs5.txt")
+MTK:16> obs6 = new intvalue("q5-4-obs/obs6.txt")
+MTK:17> obs7 = new intvalue("q5-4-obs/obs7.txt")
+MTK:18> obs8 = new intvalue("q5-4-obs/obs8.txt")
+MTK:19> obs9 = new intvalue("q5-4-obs/obs9.txt")
+MTK:20> obs10 = new intvalue("q5-4-obs/obs10.txt")
+MTK:21> obs11 = new intvalue("q5-4-obs/obs11.txt")
+MTK:22> obs12 = new intvalue("q5-4-obs/obs12.txt")
+MTK:23> obs13 = new intvalue("q5-4-obs/obs13.txt")
+MTK:24> obs14 = new intvalue("q5-4-obs/obs14.txt")
+MTK:25> obs15 = new intvalue("q5-4-obs/obs15.txt")
+
+//using method hmm.likelihood(symbols,states)
+MTK:30> model_2.likelihood(obs_symbols,obs0)
+log-likelihood = -9.0617856777e+00	likelihood = 1.1601562500e-04
+MTK:31> model_2.likelihood(obs_symbols,obs1)
+log-likelihood = -1.1865146059e+01	likelihood = 7.0312500000e-06
+MTK:32> model_2.likelihood(obs_symbols,obs2)
+log-likelihood = -8.0164179035e+00	likelihood = 3.3000000000e-04
+MTK:33> model_2.likelihood(obs_symbols,obs3)
+log-likelihood = -9.3157008876e+00	likelihood = 9.0000000000e-05
+MTK:34> model_2.likelihood(obs_symbols,obs4)
+log-likelihood = -1.2175300987e+01	likelihood = 5.1562500000e-06
+MTK:35> model_2.likelihood(obs_symbols,obs5)
+log-likelihood = -1.4978661368e+01	likelihood = 3.1250000000e-07
+MTK:36> model_2.likelihood(obs_symbols,obs6)
+log-likelihood = -9.6258558159e+00	likelihood = 6.6000000000e-05
+MTK:37> model_2.likelihood(obs_symbols,obs7)
+log-likelihood = -1.0925138800e+01	likelihood = 1.8000000000e-05
+MTK:38> model_2.likelihood(obs_symbols,obs8)
+log-likelihood = -6.9178056148e+00	likelihood = 9.9000000000e-04
+MTK:39> model_2.likelihood(obs_symbols,obs9)
+log-likelihood = -9.7211659957e+00	likelihood = 6.0000000000e-05
+MTK:40> model_2.likelihood(obs_symbols,obs10)
+log-likelihood = -5.8724378407e+00	likelihood = 2.8160000000e-03
+MTK:41> model_2.likelihood(obs_symbols,obs11)
+log-likelihood = -7.1717208248e+00	likelihood = 7.6800000000e-04
+MTK:42> model_2.likelihood(obs_symbols,obs12)
+log-likelihood = -8.5272435273e+00	likelihood = 1.9800000000e-04
+MTK:43> model_2.likelihood(obs_symbols,obs13)
+log-likelihood = -1.1330603908e+01	likelihood = 1.2000000000e-05
+MTK:44> model_2.likelihood(obs_symbols,obs14)
+log-likelihood = -5.9777983563e+00	likelihood = 2.5344000000e-03
+MTK:45> model_2.likelihood(obs_symbols,obs15)
+log-likelihood = -7.2770813405e+00	likelihood = 6.9120000000e-04
+
