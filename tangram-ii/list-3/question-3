@@ -1,0 +1,24 @@
+MTK:1> coins_model = new hmm(2,2)
+
+MTK:2> coins_model.pi[0] = 0.5 ; coins_model.pi[1] = 0.5
+
+MTK:3> coins_model.A[0][0]=0.8;coins_model.A[0][1]=0.2;coins_model.A[1][0]=0.2;coins_model.A[1][1]=0.8
+
+MTK:4> coins_model.B[0][0]=0.9;coins_model.B[0][1]=0.1;coins_model.B[1][0]=0.1;coins_model.B[1][1]=0.9
+
+MTK:5> obs1 = new intvalue("obs1.txt")
+
+MTK:6> coins_model.likelihood(obs1)
+log-likelihood = -4.1715387154e+00	likelihood = 1.5428501776e-02
+
+MTK:7> obs2 = new intvalue("obs2.txt")
+Intvalue was successfully loaded.
+
+MTK:8> coins_model.likelihood(obs2)
+log-likelihood = -8.0758976749e+00	likelihood = 3.1094401600e-04
+
+
+
+
+
+

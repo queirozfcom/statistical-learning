@@ -1,0 +1,27 @@
+>model_1 = new hmm(2,3)
+
+MTK> model_1.A[0][0] = 0.5;model_1.A[0][1] = 0.5;model_1.A[1][0] = 0.5;model_1.A[1][1]=0.5
+
+MTK> model_1.B[0][0] = 0.05;model_1.B[0][1]=0.40;model_1.B[0][2]=0.55;model_1.B[1][0]=0.80;model_1.B[1][1]=0.10;model_1.B[1][2]=0.10;
+
+MTK> q5obs = new intvalue("q5obs.txt")
+
+MTK> result = new intvalue()
+// q5obs.txt looks like this:
+// 4
+// 0
+// 1
+// 0
+// 2
+MTK> model_1.viterbi(q5obs,result)
+Initial state = 1	Last state = 0		Score = -5.371418e+00
+MTK> result.display(sample)
+'sample' at 'result'
+
+Sample size = 4
+
+Sample data =
+	[        1 ]
+	[        0 ]
+	[        1 ]
+	[        0 ]

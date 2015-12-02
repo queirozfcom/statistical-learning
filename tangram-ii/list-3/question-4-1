@@ -1,0 +1,43 @@
+MTK:1> coins_model = new hmm(2,2)
+
+MTK:2> coins_model.pi[0] = 0.5 ; coins_model.pi[1] = 0.5
+
+MTK:3> coins_model.A[0][0]=0.8;coins_model.A[0][1]=0.2;coins_model.A[1][0]=0.2;coins_model.A[1][1]=0.8
+
+MTK:4> coins_model.B[0][0]=0.9;coins_model.B[0][1]=0.1;coins_model.B[1][0]=0.1;coins_model.B[1][1]=0.9
+
+// OBS. q4obs2.txt looks like this:
+// 8
+// 0
+// 1
+// 0
+// 1
+// 0
+// 1
+// 0
+// 1
+
+MTK:5> q4obs2 = new intvalue("q4obs2.txt")
+
+MTK:6> result = new intvalue()
+
+MTK:7> coins_model.viterbi(q4obs2,result)
+Initial state = 0	Last state = 0		Score = -3.652740e+00
+
+MTK:8> result.display(sample)
+'sample' at 'result'
+
+Sample size = 8
+
+Sample data =
+	[        0 ]
+	[        0 ]
+	[        0 ]
+	[        0 ]
+	[        0 ]
+	[        0 ]
+	[        0 ]
+	[        1 ]
+
+MTK:9> coins_model.likelihood(q4obs2)
+log-likelihood = -8.0758976749e+00	likelihood = 3.1094401600e-04
